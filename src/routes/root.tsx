@@ -16,9 +16,10 @@ export function Root() {
         <input
           id="q"
           aria-label="Search users"
-          placeholder="Search"
+          placeholder="e.g. Sarah Drasner"
           type="search"
           name="q"
+          required
           disabled={isLoading}
         />
         <input hidden name="page" defaultValue="1" />
@@ -29,5 +30,3 @@ export function Root() {
     </main>
   );
 }
-
-// clicking the link redirects to the next page

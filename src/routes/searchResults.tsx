@@ -28,11 +28,14 @@ interface LoaderRes {
   total: number;
 }
 
+const DEFAULT_PAGE = 1;
+const DEFAULT_PER_PAGE = 4;
+
 export const loader: LoaderFunction = async ({ request }) => {
   const url = new URL(request.url);
   const q = url.searchParams.get("q") ?? "";
-  const page = url.searchParams.get("page") || 1;
-  const perPage = url.searchParams.get("perPage") ?? 4;
+  const page = url.searchParams.get("page") || DEFAULT_PAGE;
+  const perPage = url.searchParams.get("perPage") ?? DEFAULT_PER_PAGE;
 
   const searchResults = await fetchSearchResults({
     q,
@@ -53,8 +56,8 @@ export function SearchResults() {
   const isLoading = navigation.state === "loading";
 
   const q = searchParams.get("q");
-  const page = Number(searchParams.get("page"));
-  const perPage = Number(searchParams.get("perPage"));
+  const page = Number(searchParams.get("page")) || DEFAULT_PAGE;
+  const perPage = Number(searchParams.get("perPage")) || DEFAULT_PER_PAGE;
 
   const isLastPage = perPage * page >= total;
   const isFirstPage = page <= 1;
@@ -96,8 +99,9 @@ export function SearchResults() {
           <input
             id="q"
             aria-label="Search users"
-            placeholder="Search"
+            placeholder="e.g. Sarah Drasner"
             type="search"
+            required
             defaultValue={q ?? ""}
             name="q"
           />

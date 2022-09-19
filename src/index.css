@@ -2,9 +2,7 @@
 
 :root {
   --blue: #2a68d4;
-  --red: #dc5438;
-  --yellow: #f4c55c;
-  --orange: #e09142;
+
   --black: #333;
   --gray: #828385;
   --white: #fff;
@@ -23,7 +21,6 @@
   line-height: 24px;
   font-weight: 400;
 
-  color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
 
   box-sizing: border-box;
@@ -92,7 +89,7 @@ body {
 }
 
 h1 {
-  font-size: 3.2em;
+  font-size: 3.2rem;
   line-height: 1.1;
 }
 
@@ -117,7 +114,7 @@ button {
   height: var(--spacing-600);
   padding: var(--spacing-100) var(--spacing-200);
   height: var(--spacing-600);
-  font-size: 1em;
+  font-size: 1rem;
   font-weight: 500;
   font-family: inherit;
   background-color: #1a1a1a;
@@ -129,7 +126,7 @@ button:hover {
 }
 button:focus,
 button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  outline: var(--spacing-50) auto -webkit-focus-ring-color;
 }
 
 /* UTILITIES */
@@ -216,9 +213,7 @@ main.searchResults {
 }
 
 .resultsList:hover > .result:hover {
-  transform: scale(1.05);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  z-index: 10;
 }
 
 .resultsList:hover > .result:not(:hover) {
@@ -242,4 +237,11 @@ main.searchResults {
 
 .result .userLogin {
   font-weight: 300;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .resultsList:hover > .result:hover {
+    transform: scale(1.05);
+    z-index: 10;
+  }
 }
