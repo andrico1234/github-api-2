@@ -34,3 +34,21 @@ Using the `prefers-reduced-motion` media query ensures that I don't subject user
 I've been interested in the patterns outlined in the Every Layout web book. The focus is to not create separate designs for arbitrary screen sizes, but to instead create layouts and styles that naturally respond to the device used.
 
 To help me, I used CSS utilities like the `min` function, in addition to utility classes like `switcher` that adjust layout based on the container's size.
+
+## What would I do given more time?
+
+### Syntax highlighting in the search
+
+The GitHub search allows using boolean operators and keywords to refine searches. A neat feature would be to highlight valid keywords and boolean operators inside of the search input.
+
+### Server-rendered components to void components _popping in_
+
+Using a tool like Remix or Next.js would've allowed for server-rendered components. By generating the HTML on the server-side, the components would no longer change size before and after the data has loaded.
+
+### Saving favouriting queries
+
+Another neat feature would be to store the previous queries that someone's made. Saving them to localstorage means that they would persist across sessions.
+
+### Adding sleeker enter/leaving transitions
+
+Using a tool like Framer Motion or Motion One to create some sleek animation transitions when adding/removing items to the list. Or when changing pages. Since the last time I used React Router for page transitions, the API has changed pretty signficiantly, so it would've taken a bit of time to learn how to do page transitions.
