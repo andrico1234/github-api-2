@@ -1,0 +1,141 @@
+:root {
+  --blue: #2a68d4;
+  --red: #dc5438;
+  --yellow: #f4c55c;
+  --orange: #e09142;
+  --black: #333;
+  --white: #fff;
+
+  font-family: "CooperHewitt";
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+@font-face {
+  font-family: "CooperHewitt";
+  src: url("./fonts/CooperHewitt-Book.ttf");
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+  background: var(--black);
+}
+
+[id="root"] {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 100%;
+  height: 100%;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+main {
+  width: min(100%, 900px);
+  height: max(80%, 500px);
+  display: flex;
+
+  /* align-items: center; */
+  perspective: 1000px;
+}
+
+.door {
+  background: var(--yellow);
+  width: 100%;
+}
+
+.door-left {
+  border-right: 1px solid var(--orange);
+  animation: open-door-left 1s 1s ease-in forwards;
+  transform-origin: left center;
+}
+
+.door-right {
+  border-left: 1px solid var(--orange);
+  animation: open-door-right 1s 1s ease-in forwards;
+  transform-origin: right center;
+}
+
+@keyframes open-door-left {
+  from {
+    transform: rotateY(0deg);
+  }
+
+  to {
+    transform: rotateY(90deg);
+  }
+}
+
+@keyframes open-door-right {
+  from {
+    transform: rotateY(0deg);
+  }
+
+  to {
+    transform: rotateY(-90deg);
+  }
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
