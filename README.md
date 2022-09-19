@@ -1,14 +1,17 @@
 # GitHub Users API
 
+[View the demo](https://clever-twilight-811798.netlify.app)
+
 ## Overview
 
 ## Todo
 
-- Add a cypress test
 - Complete readme
 - Prefers reduced motion
 - Test on smaller devices
 - Error page on rate limit
+- Ensure "next" button is disabled correctly
+- Ensure that we can't search for empty text
 
 ## Technologies Used
 
