@@ -17,6 +17,7 @@
 - Netlify
 - TypeScript
 - Vite
+- Cypress
 
 ## Things worth noting
 
