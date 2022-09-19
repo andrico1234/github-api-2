@@ -82,8 +82,6 @@ export function SearchResults() {
     setSearchParams(newParams);
   };
 
-  // Display error on rate limit
-
   return (
     <main className="searchResults switcher">
       <div className="searchSection">
