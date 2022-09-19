@@ -6,7 +6,7 @@
   --black: #333;
   --white: #fff;
 
-  font-family: "CooperHewitt";
+  font-family: "CooperHewitt", Inter, "sans-serif";
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
@@ -62,13 +62,21 @@ h1 {
   line-height: 1.1;
 }
 
-main {
+main.home {
   width: min(100%, 900px);
-  height: max(80%, 500px);
-  display: flex;
+  height: max(60%, 500px);
+  text-align: center;
+}
 
-  /* align-items: center; */
-  perspective: 1000px;
+main.searchResults {
+  width: min(100%, 1200px);
+  padding: 4px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+li {
+  list-style: none;
 }
 
 .door {
