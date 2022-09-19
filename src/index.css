@@ -110,7 +110,7 @@ input {
 button {
   border: 1px solid var(--gray);
   border-radius: var(--border-radius);
-
+  color: white;
   height: var(--spacing-600);
   padding: var(--spacing-100) var(--spacing-200);
   height: var(--spacing-600);
@@ -121,12 +121,17 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
-button:hover {
+button:hover:not(:disabled) {
   border-color: var(--blue);
 }
 button:focus,
 button:focus-visible {
   outline: var(--spacing-50) auto -webkit-focus-ring-color;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: default;
 }
 
 /* UTILITIES */

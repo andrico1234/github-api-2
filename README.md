@@ -1,6 +1,6 @@
 # GitHub Users API
 
-[View the demo](https://clever-twilight-811798.netlify.app)
+[View the demo](https://github-user-search-2.netlify.app)
 
 ## Overview
 
