@@ -1,6 +1,6 @@
 type ItemType = "User";
 
-export interface SearchItem {
+export interface UserItem {
   avatar_url: string;
   events_url: string;
   followers_url: string;
@@ -20,10 +20,23 @@ export interface SearchItem {
   subscriptions_url: string;
   type: ItemType;
   url: string;
+  name: string;
+  company: string;
+  blog: string;
+  location: string | null;
+  email: string | null;
+  hireable: boolean | null;
+  bio: string;
+  twitter_username: string;
+  public_repos: number;
+  public_gists: number;
+  followers: number;
+  following: number;
+  created_at: string;
+  updated_at: string;
 }
 
 export interface SearchResults {
-  incomplete_results: boolean;
-  items: SearchItem[];
+  items: UserItem[];
   total_count: number;
 }
